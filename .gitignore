@@ -4,4 +4,5 @@
 /public/cep.html
 Homestead.yaml
 Homestead.json
+composer.lock
 .env
