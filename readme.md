@@ -68,9 +68,10 @@ Abra o terminal, vá até a pasta onde deseja clonar a aplicação e digite o co
 
 Como retorno, a pasta `api-http-busca-cep` será criada.
 
-Agora instale as dependências necessárias executando o comando abaixo:
+Agora instale as dependências necessárias executando os comandos abaixo:
 
     composer update
+    bower update
 
 Copie agora o arquivo `.env.example` na raiz do projeto e renomeie para `.env` (esse arquivo contém informações necessárias para que a API funcione adequadamente):
 

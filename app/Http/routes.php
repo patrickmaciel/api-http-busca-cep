@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'home', 'uses' => 'SinglePageController@home']);
 
 Route::group(['middleware' => 'throttle:100', 'prefix' => 'api', 'namespace' => 'Api', 'as' => 'api.'], function () {
     Route::group(['prefix' => 'v1', 'namespace' => 'V1', 'as' => 'v1.'], function () {
