@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'api', 'namespace' => 'Api', 'as' => 'api.'], function () {
+    Route::group(['prefix' => 'v1', 'namespace' => 'V1', 'as' => 'v1.'], function () {
+        Route::get('cep/{cep}', ['as' => 'cep.busca',
+            'uses' => 'CepController@buscaEnderecoPorCep']
+            )->where(['cep' => '[0-9]+']);
+    });
+});
