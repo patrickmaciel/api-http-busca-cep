@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api', 'namespace' => 'Api', 'as' => 'api.'], function () {
     Route::group(['prefix' => 'v1', 'namespace' => 'V1', 'as' => 'v1.'], function () {
-        Route::get('cep/{cep}', ['as' => 'cep.busca',
+        Route::get('cep/busca-por-cep/{cep}', ['as' => 'cep.busca_por_cep',
             'uses' => 'CepController@buscaEnderecoPorCep']
             )->where(['cep' => '[0-9]+']);
+
+        Route::get('cep/busca-por-endereco/{endereco}', ['as' => 'cep.busca_por_endereco',
+            'uses' => 'CepController@buscaCepPorEndereco']
+            )->where(['endereco' => '[0-9a-zA-Z ]+']);
     });
 });

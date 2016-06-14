@@ -36,10 +36,12 @@ php artisan key:generate
 
 - [x] Configurar aplicação padrão
 - [x] Configurar rota padrão
-- [x] Configurar rota para buscar por CEP
+- [x] Configurar rota para buscar Endereço por CEP
+- [x] Configurar rota para buscar CEP por Endereço
 - [ ] Limitar quantidade de requisições por IP
 - [ ] Validar parâmetro informado na URL
 - [ ] Páginas de erro
 - [ ] Refatorar usando Repository
+- [x] Refatorar usando Services
 - [ ] TDD
 - Response padrão

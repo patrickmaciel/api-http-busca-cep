@@ -1,26 +1,13 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Services\CorreiosApi;
 
 class ApiController extends Controller
 {
-    protected function render($view, $data = array(), $viewData = array())
-    {
-        // TODO
-    }
+    protected $correios;
 
-    public function response()
-    {
-        // TODO
-    }
-
-    public function redirectSuccess($route, $data = array(), $status = 302, $headers = array())
-    {
-        // TODO
-    }
-
-    public function redirectFailed($route, $data = array(), $status = 302, $headers = array())
-    {
-        // TODO
+    public function __construct(CorreiosApi $correios) {
+        $this->correios = $correios;
     }
 }
