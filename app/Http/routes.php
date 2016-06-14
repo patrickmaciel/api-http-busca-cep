@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'api', 'namespace' => 'Api', 'as' => 'api.'], function () {
+Route::group(['middleware' => 'throttle:100', 'prefix' => 'api', 'namespace' => 'Api', 'as' => 'api.'], function () {
     Route::group(['prefix' => 'v1', 'namespace' => 'V1', 'as' => 'v1.'], function () {
         Route::get('cep/busca-por-cep/{cep}', ['as' => 'cep.busca_por_cep',
             'uses' => 'CepController@buscaEnderecoPorCep']
