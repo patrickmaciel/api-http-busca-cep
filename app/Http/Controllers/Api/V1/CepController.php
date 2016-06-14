@@ -18,16 +18,12 @@ class CepController extends ApiController
                     'relaxation' => $cep
                 ]
         ]);
-        // var_dump($response);
+
         $body = $response->getBody(true);
-        // var_dump($body);
-        // $file = fopen("cep.html", "w+");
-        // fwrite($file, $body);
 
         libxml_use_internal_errors(true);
         $dom = new DOMDocument;
         $dom->preserveWhiteSpace = false;
-        // $dom->loadHTMLFile('cep.html');
         $dom->loadHTML($body);
         $rows = $dom->getElementsByTagName('tr');
 
