@@ -21,8 +21,8 @@ Route::group(['middleware' => 'throttle:100', 'prefix' => 'api', 'namespace' => 
             'uses' => 'CepController@buscaEnderecoPorCep']
             )->where(['cep' => '[0-9]+']);
 
-        Route::get('cep/busca-por-endereco/{endereco}', ['as' => 'cep.busca_por_endereco',
-            'uses' => 'CepController@buscaCepPorEndereco']
-            )->where(['endereco' => '[0-9a-zA-Z ]+']);
+        Route::get('cep/busca-por-logradouro/{logradouro}', ['as' => 'cep.busca_por_logradouro',
+            'uses' => 'CepController@buscaCepPorLogradouro']
+            )->where(['logradouro' => '[0-9a-zA-Z ]+']);
     });
 });

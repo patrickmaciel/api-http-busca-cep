@@ -14,9 +14,9 @@ class CepController extends ApiController
         return response()->json($responseCorreios);
     }
 
-    public function buscaCepPorEndereco($endereco)
+    public function buscaCepPorLogradouro($logradouro)
     {
-        $responseCorreios = $this->correios->buscar($endereco);
+        $responseCorreios = $this->correios->buscar($logradouro);
         return response()->json($responseCorreios);
     }
 }
