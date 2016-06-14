@@ -39,8 +39,8 @@ php artisan key:generate
 - [x] Configurar rota para buscar Endereço por CEP
 - [x] Configurar rota para buscar CEP por Endereço
 - [x] Limitar quantidade de requisições por IP
-- [ ] Validar parâmetro informado na URL
-- [ ] Páginas de erro
+- [x] Validar parâmetro informado na URL
+- [x] Páginas de erro
 - [ ] Refatorar usando Repository
 - [x] Refatorar usando Services
 - [ ] TDD
